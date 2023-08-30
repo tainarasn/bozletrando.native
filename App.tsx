@@ -59,7 +59,7 @@ const App = () => {
 
     return (
         <PaperProvider>
-            <StatusBar style="dark" />
+            <StatusBar style="dark" hidden />
             {/* {!loaded && <SplashLoading progress={progress} />} */}
             <WebView
                 ref={webViewRef}
