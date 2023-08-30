@@ -9,7 +9,7 @@
       "userInterfaceStyle": "light",
       "splash": {
           "image": "./assets/splash.png",
-          "resizeMode": "contain",
+          "resizeMode": "cover",
           "backgroundColor": "#ffffff"
       },
       "assetBundlePatterns": ["**/*"],
@@ -22,10 +22,16 @@
               "foregroundImage": "./assets/adaptive-icon.png",
               "monochromeImage": "./assets/adaptive-icon.png",
               "backgroundColor": "#ffffff"
-          }
+          },
+          "package": "br.com.agenciaboz.tecagro"
       },
       "web": {
           "favicon": "./assets/favicon.png"
+      },
+      "extra": {
+          "eas": {
+              "projectId": "2a172ca3-27f7-4fa6-9c5e-e1a8faa870f0"
+          }
       }
   }
 }
