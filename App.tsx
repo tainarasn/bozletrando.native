@@ -64,6 +64,7 @@ const App = () => {
             <WebView
                 ref={webViewRef}
                 source={{ uri: "http://192.168.15.30:5173/" }}
+                // source={{ uri: "https://tec.agro.agenciaboz.com.br/" }}
                 style={{ flex: 1 }}
                 // containerStyle={{ display: loaded ? "flex" : "none" }}
                 allowFileAccess
