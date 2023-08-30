@@ -10,7 +10,7 @@
       "splash": {
           "image": "./assets/splash.png",
           "resizeMode": "cover",
-          "backgroundColor": "#ffffff"
+          "backgroundColor": "#A37449"
       },
       "assetBundlePatterns": ["**/*"],
       "ios": {
@@ -21,7 +21,7 @@
           "adaptiveIcon": {
               "foregroundImage": "./assets/icon.png",
               "monochromeImage": "./assets/adaptive-icon.png",
-              "backgroundColor": "#ffffff"
+              "backgroundColor": "#A37449"
           },
           "package": "br.com.agenciaboz.tecagro"
       },
