@@ -1,22 +1,23 @@
-import { StatusBar } from 'expo-status-bar';
+import { StatusBar } from "expo-status-bar"
 import { useEffect, useRef, useState } from "react"
-import { Alert, BackHandler, StyleSheet, Text, View } from "react-native"
-import * as SplashScreen from "expo-splash-screen"
+import { WebView } from "react-native-webview"
 import { Camera } from "expo-camera"
+import { Alert, BackHandler } from "react-native"
+import * as SplashScreen from "expo-splash-screen"
+// import { SplashLoading } from "./src/Screens/SplashLoading"
 import { PaperProvider } from "react-native-paper"
-import WebView from "react-native-webview"
 
 SplashScreen.preventAutoHideAsync()
 
-const App = () => {
+export default function App() {
     const webViewRef = useRef(null)
-    const [progress, setProgress] = useState(0)
     const [hasPermission, setHasPermission] = useState<boolean | null>(null)
+    const [progress, setProgress] = useState(0)
+    const [loaded, setLoaded] = useState(false)
 
     const INJECTEDJAVASCRIPT = `(function() {
         const meta = document.createElement('meta'); meta.setAttribute('content', 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'); meta.setAttribute('name', 'viewport'); document.getElementsByTagName('head')[0].appendChild(meta);
-      })();
-      `
+      })();`
 
     const onLoaded = async () => {
         // await SplashScreen.hideAsync()
@@ -28,22 +29,6 @@ const App = () => {
             { text: "Fechar", onPress: () => BackHandler.exitApp() },
         ])
     }
-
-    useEffect(() => {
-        if (hasPermission === false) {
-            Alert.alert(
-                "Permissão necessária",
-                "Seu dispositivo não está permitindo acesso a câmera. Você pode corrigir isso nos ajustes do seu dispositivo"
-            )
-        }
-    }, [hasPermission])
-
-    useEffect(() => {
-        ;(async () => {
-            const { status } = await Camera.requestCameraPermissionsAsync()
-            setHasPermission(status === "granted")
-        })()
-    }, [])
 
     useEffect(() => {
         const backAction = () => {
@@ -59,12 +44,11 @@ const App = () => {
 
     return (
         <PaperProvider>
-            <StatusBar style="dark" hidden />
+            <StatusBar style="dark" />
             {/* {!loaded && <SplashLoading progress={progress} />} */}
             <WebView
                 ref={webViewRef}
-                source={{ uri: "http://192.168.15.30:5173/" }}
-                // source={{ uri: "https://tec.agro.agenciaboz.com.br/" }}
+                source={{ uri: "https://bozletrando.agenciaboz.com.br" }}
                 style={{ flex: 1 }}
                 // containerStyle={{ display: loaded ? "flex" : "none" }}
                 allowFileAccess
@@ -81,14 +65,3 @@ const App = () => {
         </PaperProvider>
     )
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: "#fff",
-        alignItems: "center",
-        justifyContent: "center",
-    },
-})
-
-export default App

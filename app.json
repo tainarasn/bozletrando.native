@@ -1,37 +1,39 @@
 {
   "expo": {
-      "name": "TEC.AGRO",
-      "slug": "tecagro",
-      "owner": "agenciaboz-dev",
-      "version": "1.0.0",
-      "orientation": "portrait",
-      "icon": "./assets/icon.png",
-      "userInterfaceStyle": "light",
-      "splash": {
-          "image": "./assets/splash.png",
-          "resizeMode": "cover",
-          "backgroundColor": "#A37449"
+    "name": "BOZLETRANDO",
+    "slug": "bozletrando",
+    "owner": "agenciaboz-dev",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/favicon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#00AFEF"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "br.com.agenciaboz.bozletrando"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/favicon.png",
+        "monochromeImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#00AFEF"
       },
-      "assetBundlePatterns": ["**/*"],
-      "ios": {
-          "supportsTablet": true,
-          "bundleIdentifier": "br.com.agenciaboz.tecagro"
-      },
-      "android": {
-          "adaptiveIcon": {
-              "foregroundImage": "./assets/icon.png",
-              "monochromeImage": "./assets/adaptive-icon.png",
-              "backgroundColor": "#A37449"
-          },
-          "package": "br.com.agenciaboz.tecagro"
-      },
-      "web": {
-          "favicon": "./assets/favicon.png"
-      },
-      "extra": {
-          "eas": {
-              "projectId": "2a172ca3-27f7-4fa6-9c5e-e1a8faa870f0"
-          }
+      "package": "br.com.agenciaboz.bozletrando"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "ece13516-f2b1-4846-8efd-fd7ff15d087a"
       }
+    }
   }
 }
