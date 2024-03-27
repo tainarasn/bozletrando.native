@@ -1,39 +1,37 @@
 {
   "expo": {
-    "name": "BOZLETRANDO",
-    "slug": "bozletrando",
-    "owner": "agenciaboz-dev",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/favicon.png",
-    "userInterfaceStyle": "light",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "cover",
-      "backgroundColor": "#00AFEF"
-    },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
-    "ios": {
-      "supportsTablet": false,
-      "bundleIdentifier": "br.com.agenciaboz.bozletrando"
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/favicon.png",
-        "monochromeImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#00AFEF"
+      "name": "Bozletrando",
+      "slug": "bozletrando",
+      "owner": "agenciaboz-dev",
+      "version": "1.0.0",
+      "orientation": "portrait",
+      "icon": "./assets/icon.png",
+      "userInterfaceStyle": "light",
+      "splash": {
+          "image": "./assets/splash.png",
+          "resizeMode": "cover",
+          "backgroundColor": "#fff"
       },
-      "package": "br.com.agenciaboz.bozletrando"
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    },
-    "extra": {
-      "eas": {
-        "projectId": "ece13516-f2b1-4846-8efd-fd7ff15d087a"
+      "assetBundlePatterns": ["**/*"],
+      "ios": {
+          "supportsTablet": false,
+          "bundleIdentifier": "br.com.agenciaboz.bozletrando"
+      },
+      "android": {
+          "adaptiveIcon": {
+              "foregroundImage": "./assets/foreground-icon.png",
+              "backgroundImage": "./assets/background-icon.png",
+              "monochromeImage": "./assets/adaptive-icon.png"
+          },
+          "package": "br.com.agenciaboz.bozletrando"
+      },
+      "web": {
+          "favicon": "./assets/favicon.png"
+      },
+      "extra": {
+          "eas": {
+              "projectId": "ece13516-f2b1-4846-8efd-fd7ff15d087a"
+          }
       }
-    }
   }
 }

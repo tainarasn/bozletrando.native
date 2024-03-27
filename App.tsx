@@ -44,7 +44,7 @@ export default function App() {
 
     return (
         <PaperProvider>
-            <StatusBar style="dark" />
+            <StatusBar style="inverted" translucent={false} />
             {/* {!loaded && <SplashLoading progress={progress} />} */}
             <WebView
                 ref={webViewRef}
