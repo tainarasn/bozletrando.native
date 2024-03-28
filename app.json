@@ -25,9 +25,6 @@
           },
           "package": "br.com.agenciaboz.bozletrando"
       },
-      "web": {
-          "favicon": "./assets/favicon.png"
-      },
       "extra": {
           "eas": {
               "projectId": "ece13516-f2b1-4846-8efd-fd7ff15d087a"

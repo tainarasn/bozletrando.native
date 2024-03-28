@@ -1,7 +1,6 @@
 import { StatusBar } from "expo-status-bar"
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef } from "react"
 import { WebView } from "react-native-webview"
-import { Camera } from "expo-camera"
 import { Alert, BackHandler } from "react-native"
 import * as SplashScreen from "expo-splash-screen"
 // import { SplashLoading } from "./src/Screens/SplashLoading"
@@ -11,9 +10,6 @@ SplashScreen.preventAutoHideAsync()
 
 export default function App() {
     const webViewRef = useRef(null)
-    const [hasPermission, setHasPermission] = useState<boolean | null>(null)
-    const [progress, setProgress] = useState(0)
-    const [loaded, setLoaded] = useState(false)
 
     const INJECTEDJAVASCRIPT = `(function() {
         const meta = document.createElement('meta'); meta.setAttribute('content', 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'); meta.setAttribute('name', 'viewport'); document.getElementsByTagName('head')[0].appendChild(meta);
@@ -55,7 +51,6 @@ export default function App() {
                 mediaCapturePermissionGrantType="grant"
                 mediaPlaybackRequiresUserAction={false}
                 textZoom={100}
-                onLoadProgress={({ nativeEvent }) => setProgress(nativeEvent.progress)}
                 onLoad={onLoaded}
                 onError={onError}
                 allowsInlineMediaPlayback
